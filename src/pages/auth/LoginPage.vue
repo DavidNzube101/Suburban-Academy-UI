@@ -4,8 +4,8 @@
         <!-- Logo -->
         <div class="text-center">
           <div class="mx-auto flex w-48 items-center justify-center">
-            <div class="mr-2 h-8 w-1 bg-red-600"></div>
-            <h1 class="text-2xl font-bold">Suburban Academy</h1>
+            <img src="../../../public/suburban-logo.png" alt="logo" class="h-10 w-10">
+          Suburban<br/>Academy
           </div>
           <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900">
             Sign in to your account
