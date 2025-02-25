@@ -95,10 +95,10 @@
   import { storeToRefs } from 'pinia'
   import { Calendar, Clock, CheckCircle } from 'lucide-vue-next'
   import { useWebinarStore } from '../../stores/webinar'
-  import LiveIndicator from '../components/shared/LiveIndicator.vue'
-  import ViewerCount from '../components/shared/ViewerCount.vue'
-  import WebinarStream from '../components/webinar/WebinarStream.vue'
-  import ChatBox from '../components/webinar/ChatBox.vue'
+  import LiveIndicator from '../../components/shared/LiveIndicator.vue'
+  import ViewerCount from '../../components/shared/ViewerCount.vue'
+  import WebinarStream from '../../components/webinar/WebinarStream.vue'
+  import ChatBox from '../../components/webinar/ChatBox.vue'
   
   const router = useRouter()
   const route = useRoute()

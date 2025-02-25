@@ -132,7 +132,7 @@
   import { useRouter, useRoute } from 'vue-router'
   import { Loader2 } from 'lucide-vue-next'
   import { useWebinarStore } from '../../stores/webinar'
-  import NotificationModal from '../components/shared/NotificationModal.vue'
+  import NotificationModal from '../../components/shared/NotificationModal.vue'
   import { validateEmail, validatePhone } from '../../utils/validation'
   
   const router = useRouter()
