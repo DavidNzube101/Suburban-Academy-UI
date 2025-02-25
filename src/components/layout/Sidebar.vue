@@ -22,7 +22,7 @@
       ]">
     <div class="p-6">
       <div class="flex items-center gap-2">
-        <img src="../../../suburban-logo.png" alt="Suburban Academy logo" class="h-8 w-8">
+        <img src="../../../public/suburban-logo.png" alt="Suburban Academy logo" class="h-8 w-8">
         <div class="flex flex-col">
           <span class="text-lg font-semibold leading-tight">Suburban</span>
           <span class="text-lg font-semibold leading-tight">Academy</span>
