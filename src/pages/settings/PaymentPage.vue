@@ -16,7 +16,7 @@
           <div class="flex-1">
             <label for="paystack" class="block font-medium">Secured by Paystack</label>
             <div class="mt-2 rounded-lg border border-gray-200 p-4">
-              <img src="/visa-logo.svg" alt="Visa" class="h-6">
+              <img src="https://placehold.co/32" alt="Visa" class="h-6">
             </div>
           </div>
         </div>
