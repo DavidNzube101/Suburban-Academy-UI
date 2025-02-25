@@ -5,12 +5,53 @@ import type { RouteRecordRaw } from 'vue-router'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import(/* webpackChunkName: "main-layout" */ '../layouts/MainLayout.vue'),
+    component: () => import('../layouts/MainLayout.vue'),
     children: [
       {
         path: '',
         name: 'dashboard',
-        component: () => import(/* webpackChunkName: "dashboard" */ '../pages/DashboardPage.vue')
+        component: () => import('../pages/DashboardPage.vue')
+      },
+      {
+        path: 'settings',
+        component: () => import('../pages/settings/SettingsLayout.vue'),
+        children: [
+          {
+            
+            path: '',
+            redirect: { name: 'settings-profile' }
+          },
+          {
+            path: 'profile',
+            name: 'settings-profile',
+            component: () => import('../pages/settings/ProfilePage.vue')
+          },
+          {
+            path: 'payment',
+            name: 'settings-payment',
+            component: () => import('../pages/settings/PaymentPage.vue')
+          },
+          {
+            path: 'orders',
+            name: 'settings-orders',
+            component: () => import('../pages/settings/OrdersPage.vue')
+          },
+          {
+            path: 'subscription',
+            name: 'settings-subscription',
+            component: () => import('../pages/settings/SubscriptionPage.vue')
+          },
+          {
+            path: 'notifications',
+            name: 'settings-notifications',
+            component: () => import('../pages/settings/NotificationsPage.vue')
+          },
+          {
+            path: 'display',
+            name: 'settings-display',
+            component: () => import('../pages/settings/DisplayPage.vue')
+          }
+        ]
       },
       {
         path: 'webinars',
@@ -56,11 +97,6 @@ const routes: RouteRecordRaw[] = [
         path: 'certificates',
         name: 'certificates',
         component: () => import(/* webpackChunkName: "certificates" */ '../pages/CertificatesPage.vue')
-      },
-      {
-        path: 'settings',
-        name: 'settings',
-        component: () => import(/* webpackChunkName: "settings" */ '../pages/SettingsPage.vue')
       }
     ]
   },

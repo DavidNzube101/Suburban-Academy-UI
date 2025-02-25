@@ -1,8 +1,28 @@
 <template>
-  <aside class="fixed left-0 top-0 h-full w-64 rounded-r-3xl bg-black text-white">
+  <div class="relative">
+    <!-- Mobile Menu Trigger -->
+    <button
+      @click="isOpen = !isOpen"
+      class="fixed left-4 top-4 z-40 rounded-lg bg-black p-2 text-white lg:hidden"
+    >
+      <Menu v-if="!isOpen" class="h-6 w-6" />
+      <X v-else class="h-6 w-6" />
+    </button>
+
+    <!-- Sidebar Backdrop -->
+    <div
+      v-if="isOpen"
+      class="fixed inset-0 z-30 bg-black/50 lg:hidden"
+      @click="isOpen = false"
+    />
+
+    <aside :class="[
+        'fixed left-0 top-0 z-30 h-full w-64 transform bg-black text-white transition-transform duration-200 ease-in-out',
+        isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
+      ]">
     <div class="p-6">
       <div class="flex items-center gap-2">
-        <img src="../../../public/suburban-logo.png" alt="Suburban Academy logo" class="h-8 w-8">
+        <img src="../../../suburban-logo.png" alt="Suburban Academy logo" class="h-8 w-8">
         <div class="flex flex-col">
           <span class="text-lg font-semibold leading-tight">Suburban</span>
           <span class="text-lg font-semibold leading-tight">Academy</span>
@@ -47,10 +67,13 @@
       </div>
     </nav>
   </aside>
+  </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { Menu, X } from 'lucide-vue-next'
 import type { MenuItem } from '../../types/navigation'
 import { 
   LayoutDashboard,
@@ -64,6 +87,8 @@ import {
 } from 'lucide-vue-next'
 
 const route = useRoute()
+const isOpen = ref(false)
+const isCurrentRoute = (path: string) => route.path === path
 
 const menuItems: MenuItem[] = [
   { name: 'Dashboard', icon: LayoutDashboard, path: '/' },
@@ -75,12 +100,4 @@ const menuItems: MenuItem[] = [
   { name: 'Certificates', icon: Award, path: '/certificates' },
   { name: 'Settings', icon: Settings, path: '/settings' }
 ]
-
-const isCurrentRoute = (path: string) => route.path === path
 </script>
-
-<style scoped>
-.router-link-active {
-  @apply text-red-500;
-}
-</style>
