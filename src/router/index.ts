@@ -17,7 +17,7 @@ const routes: RouteRecordRaw[] = [
         component: () => import('../pages/settings/SettingsLayout.vue'),
         children: [
           {
-            
+
             path: '',
             redirect: { name: 'settings-profile' }
           },
@@ -59,24 +59,24 @@ const routes: RouteRecordRaw[] = [
           {
             path: '',
             name: 'webinars',
-            component: () => import(/* webpackChunkName: "webinar-list" */ '../pages/webinar/WebinarListPage.vue')
+            component: () => import('../pages/webinar/WebinarListPage.vue')
           },
           {
             path: ':id',
             name: 'webinar-detail',
-            component: () => import(/* webpackChunkName: "webinar-detail" */ '../pages/webinar/WebinarDetailPage.vue')
+            component: () => import('../pages/webinar/WebinarDetailPage.vue')
           },
           {
             path: 'register/:id',
             name: 'webinar-registration',
-            component: () => import(/* webpackChunkName: "webinar-registration" */ '../pages/webinar/WebinarRegistrationPage.vue')
+            component: () => import('../pages/webinar/WebinarRegistrationPage.vue')
           }
         ]
       },
       {
         path: 'courses',
         name: 'courses',
-        component: () => import(/* webpackChunkName: "courses" */ '../pages/CoursesPage.vue')
+        component: () => import('../pages/CoursesPage.vue')
       },
       {
         path: 'teachers',

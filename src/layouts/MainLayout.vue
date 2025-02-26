@@ -1,10 +1,11 @@
 <template>
     <div class="flex min-h-screen bg-gray-50">
       <Sidebar />
-      <main class="ml-64 flex-1">
+      <main class="ml-52 flex-1">
         <div class="mx-auto max-w-7xl px-8 py-6">
           <Header />
           <slot />
+          <RouterView />
         </div>
       </main>
     </div>

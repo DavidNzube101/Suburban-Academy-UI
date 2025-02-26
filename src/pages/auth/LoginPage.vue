@@ -3,9 +3,9 @@
       <div class="w-full max-w-md space-y-8">
         <!-- Logo -->
         <div class="text-center">
-          <div class="mx-auto flex w-48 items-center justify-center">
-            <img src="../../../public/suburban-logo.png" alt="logo" class="h-10 w-10">
-          Suburban<br/>Academy
+          <div class="mx-auto flex w-48 items-center justify-center text-black font-bold text-left">
+            <img src="../../../public/suburban-logo.png" alt="logo" class="h-10 w-10 rounded-md mr-2">
+            Suburban<br/>Academy
           </div>
           <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900">
             Sign in to your account
